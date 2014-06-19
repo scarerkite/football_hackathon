@@ -6,7 +6,7 @@ gem 'rails', '3.2.17'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'yelp', require: 'yelp'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +21,16 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'hirb'
+  gem 'sextant'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
