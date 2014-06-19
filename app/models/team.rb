@@ -1,3 +1,3 @@
 class Team < ActiveRecord::Base
-  attr_accessible :Countries
+  attr_protected
 end
