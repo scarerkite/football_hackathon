@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
   # GET /teams.json
   def index
     @teams = Team.all
-
+    # Yelp.client.search('San Francisco', { term: 'food' })
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @teams }
