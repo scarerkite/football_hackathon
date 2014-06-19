@@ -1,10 +1,7 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <p>
-  <b>Countries:</b>
-  <%= @team.Countries %>
+  Pick a team to support:
 </p>
 
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<%= render 'form' %>
