@@ -3,7 +3,9 @@ class TeamsController < ApplicationController
   # GET /teams.json
   def index
     @teams = Team.all
-    # Yelp.client.search('San Francisco', { term: 'food' })
+    borough = Team.find_borough(params[:id])
+    puts "The borough is #{@borough}"
+    puts Yelp.client.search(borough, { category_filter: 'bars' }).inspect
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @teams }
@@ -13,8 +15,6 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
-    @team = Team.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @team }
