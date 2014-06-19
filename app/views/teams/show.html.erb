@@ -1,7 +1,7 @@
 <%= @borough %>
 <% place = @places.businesses[0] %>
   <%= place.name %>
-
+  <% address = place.location.display_address.join(" ") %>
   
   
 
@@ -13,3 +13,7 @@
     <h1>Random World Cup Pub Crawl Generator</h1>
     <p>Find us during working hours at:</p>
     <div id="map_canvas"></div>
+
+    <%= link_to "Citymapper", "https://citymapper.com/directions?endname=#{place.name}&endaddress=#{place.location.display_address.join(" ")}" %>
+
+    <%= link_to "Google", "https://maps.googleapis.com/maps/api/geocode/json?address=#{place.location.display_address.join(" ")}&key=AIzaSyCC8HiyveEyJTxzksXUco0fBbSb1MqSsA4" %>
