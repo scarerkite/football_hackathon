@@ -1,7 +1,4 @@
-function initialise(){
- }
- google.maps.event.addDomListener(window, 'load', initialise); 
- 
+
  function initialise() {
    var mapOptions = {
      center: new google.maps.LatLng(51.5, -0.1),
@@ -44,5 +41,5 @@ function addMarker(map) {
 
 
    
- 
- google.maps.event.addDomListener(window, 'load', initialise);
+ $(initialise)
+ //google.maps.event.addDomListener(window, 'load', initialise);
