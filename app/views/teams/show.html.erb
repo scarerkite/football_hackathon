@@ -1,10 +1,21 @@
 <%= @borough %>
 <% place = @places.businesses[0] %>
   <%= place.name %>
- 
+  <% address = place.location.display_address.join(" ") %>
+  <% latitude = get_coords(address)["lat"] %>
+  <% longitude = get_coords(address)["lng"] %>
+
+
     <address>
       <%= place.location.display_address.join(" ") %>
     </address> <br>
     <h1>Random World Cup Pub Crawl Generator</h1>
     <p>Find us during working hours at:</p>
     <div id="map_canvas"></div>
+    <div class="place_info" data-latitude="" data-longitude=""></div>
+
+    <%= link_to "Citymapper", "https://citymapper.com/directions?endcoord=#{latitude},#{longitude}&endname=#{place.name}&endaddress=#{place.location.display_address.join(' ')}", :target => '_blank' %>
+
+    
+
+

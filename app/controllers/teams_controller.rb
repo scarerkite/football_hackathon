@@ -12,13 +12,23 @@ class TeamsController < ApplicationController
 
   # GET /teams/1
   # GET /teams/1.json
-  def show
+  def show()
     @borough = Team.find_borough(params[:id])
     @places = Yelp.client.search(@borough, { category_filter: 'bars' })
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @team }
+    
     end
+
+  end
+
+  def geocode(address)
+
+    # @url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{address}"
+
+    # @longitude = results[0].geometry.location.lng
+    # @latitude = results[0].geometry.location.lat
 
   end
 
