@@ -2,19 +2,19 @@
 <html>
 <head>
   <title>World Cup Pub Crawl Generator</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC8HiyveEyJTxzksXUco0fBbSb1MqSsA4&sensor=false"></script>
-
   
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-
-
-<%= yield %>
-
+  <div id="top" class="header">
+        <div class="vert-text">
+            <h1>World Cup Pub Crawl</h1>
+            <%= yield %>            
+        </div>
+    </div>
 </body>
 </html>

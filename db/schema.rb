@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140619154328) do
+ActiveRecord::Schema.define(:version => 20140620081929) do
 
   create_table "teams", :force => true do |t|
     t.string   "Countries"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20140619154328) do
     t.string   "Westminster"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.string   "flat"
   end
 
 end
