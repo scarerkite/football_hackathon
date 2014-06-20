@@ -14,7 +14,7 @@ class TeamsController < ApplicationController
   # GET /teams/1.json
   def show()
     @borough = Team.find_borough(params[:id])
-    @places = Yelp.client.search(@borough, { category_filter: 'bars' })
+    @places = Yelp.client.search(@borough, { category_filter: 'sportsbars' })
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @team }
