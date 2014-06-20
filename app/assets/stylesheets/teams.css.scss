@@ -6,6 +6,12 @@
   height: 300px;
 }
 
+p {
+  font-size: 13px;
+  color: white;
+  font-family: Helvetica, Arial;
+}
+
 body {
   margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
 }
@@ -21,7 +27,8 @@ footer {
 h1 {
   font-family: Helvetica, Arial;
   color: white;
-  font-size: 20px;
+  font-size: 40px;
+  text-align: center;
 }
 
 h2 {
@@ -62,12 +69,7 @@ body {
   text-align: center;
 }
 
-.vert-text h1 {
-  padding: 0;
-  margin: 0;
-  font-size: 4.5em;
-  font-weight: 700;
-}
+
 
 .button {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;

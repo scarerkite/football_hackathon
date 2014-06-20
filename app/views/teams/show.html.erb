@@ -1,12 +1,12 @@
 <div id="map-container"> 
- <%= @borough %>
+ <% @borough %>
   <% place = @places.businesses[0] %>
-    <%= place.name %>
     <% address = place.location.display_address.join(" ") %>
     <% latitude = get_coords(address)["lat"] %>
     <% longitude = get_coords(address)["lng"] %>
       <div id="map_canvas"></div>
       <div class="place_info" data-latitude="" data-longitude=""></div>
+       <%= place.name %>
       <address>
         <%= place.location.display_address.join(" ") %>
       </address> <br>
