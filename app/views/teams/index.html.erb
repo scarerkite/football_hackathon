@@ -1,8 +1,9 @@
 <h2>Choose a team</h2>
 
 <% @teams.each do |team| %>
-<div>
-  <%= link_to team.Countries, team, class:"pure-button" %>
+<div id="country-container">
+  <%= link_to team.Countries, team, class:"button" %>
+</div>
 
 
 <% end %>
