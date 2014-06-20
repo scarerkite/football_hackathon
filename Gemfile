@@ -9,7 +9,6 @@ gem 'sqlite3'
 gem 'yelp', require: 'yelp'
 gem 'haml'
 gem 'haml-rails'
-
 gem "geocoder"
 # Gems used only for assets and not required
 # in production environments by default.
