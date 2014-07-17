@@ -35,7 +35,7 @@ function addMarker(map) {
        });
        map.setCenter(results[0].geometry.location);
      } else {
-       console.warn("coulnt geocode address.");
+       console.warn("Couldn't geocode address.");
      }
    }
 
